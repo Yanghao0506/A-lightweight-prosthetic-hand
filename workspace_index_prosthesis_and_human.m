@@ -1,17 +1,18 @@
 %手指工作空间的点云图
 clear
 clc
+%Directly click the Run button on the Matlab editor to get the workspace
 %The DIP and PIP joints of the index finger are connected by a four-bar linkage, resulting in a complex angular relationship. 
 %To simplify, we assume that the two angles are proportional. 
 %This assumption is supported by the actual working conditions of our prosthetic hand and does not affect the conclusions.
-%The range of motion of the prostheitic hand index finger joints, same as Supplementary Table 6
+%The range of motion of the prostheitic hand index finger joints, comes from Supplementary Table 6
 a1min=-20;a1max=90;a2min=-22;a2max=22;
 a3min=-11;a3max=90;a4min=-15;a4max=80;
 
 %Too many random trials will consume a significant amount of time and computer resources. 
 %Moreover, due to diminishing returns, the improvement in simulation accuracy will be minimal. 
 %We recommend conducting no more than 100,000 random trials, with 50,000 being ideal, to ensure quick results.
-N=1000000;%选择N个随机点
+N=1000000;%选择N个随机点(Select N random experiments)
 pointsize=30;
 
 % a1 = a1min + (a1max - a1min).*rand(N,1);
@@ -318,7 +319,7 @@ hold on
 % % %工作空间和边框，前面上方
 %The human index finger’s swing motion is constrained by lateral stiffness during bending, which limits its swing amplitude. 
 %For easy comparison, we did not consider this limitation
-%The range of motion of the human hand index finger joints, same as Supplementary Table 6
+%The range of motion of the human hand index finger joints, comes from Supplementary Table 6
 a1min=-16;a1max=85;a2min=-20;a2max=20;
 a3min=-5;a3max=103;a4min=-4;a4max=71;
 N=1000;%选择N个随机点
