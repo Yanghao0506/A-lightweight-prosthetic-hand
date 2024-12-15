@@ -1,9 +1,10 @@
 % 手指工作空间的点云图
 clear
 clc
+%Directly click the Run button on the Matlab editor to get the workspace
 %The human thumb has a complex structure, with variations in the distribution of its degrees of freedom across different anatomy textbooks. 
 %For easy comparison, in this work, the range of motion of the human thumb joints has been expanded to match that of the prosthetic hand.
-%The range of motion of the prostheitic hand thumb joints, same as Supplementary Table 6
+%The range of motion of the prostheitic hand thumb joints, comes from Supplementary Table 6
 a0min=-25;a0max=38;
 a1min=-27;a1max=45;a2min=-20;a2max=35;
 a3min=-40;a3max=65;a4min=-10;a4max=80;
@@ -11,7 +12,7 @@ a3min=-40;a3max=65;a4min=-10;a4max=80;
 %Too many random trials will consume a significant amount of time and computer resources. 
 %Moreover, due to diminishing returns, the improvement in simulation accuracy will be minimal. 
 % We recommend conducting no more than 100,000 random trials, with 50,000 being ideal, to ensure quick results.
-N=1000000;%选择N个随机点
+N=1000000;%选择N个随机点(Select N random experiments)
 pointsize=30;
 a0 = a0min + (a0max - a0min).*rand(N,1);
 a1 = a1min + (a1max - a1min).*rand(N,1);
@@ -548,14 +549,14 @@ hold on
 %%%%----------------------------------------------------------------------------------------------------------------
 %%%%----------------------------------------------------------------------------------------------------------------
 %To plot the workspace boundary, extensive random trials are not necessary.
+N=1000;%选择N个随机点
 %The human thumb has a complex structure, with variations in the distribution of its degrees of freedom across different anatomy textbooks. 
 %For easy comparison, in this work, the range of motion of the human thumb joints has been expanded to match that of the prosthetic hand.
-N=1000;%选择N个随机点
 %The range of motion of the human hand thumb joints in Supplementary Table 6
-%Readers can modify the program themselves to obtain results regarding the workspace of the finger.
 % a0min=-8.5;a0max=8.5;
 % a1min=-24;a1max=36;a2min=-20;a2max=30;
 % a3min=-30;a3max=60;a4min=0;a4max=75;
+%Readers can modify the program themselves to obtain results regarding the workspace of the finger.
 %The range of motion of the human hand thumb joints actually used in this program,larger than that presented in Supplementary Table 6
 a0min=-25;a0max=38;
 a1min=-27;a1max=45;a2min=-20;a2max=35;
